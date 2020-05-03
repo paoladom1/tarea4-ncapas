@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Productos</title>
+</head>
+<body>
+
+<form th:action="@{/procesar}" method="post" th:object="${product}">
+    <label>Codigo de Producto</label><input type="text" th:field="*{codigo}" placeholder="Ingrese el codigo del producto">
+    <span th:errors="*{codigo}" style="color: #FF0000"></span> <br>
+    <label>Nombre de Producto</label><input type="text" th:field="*{nombre}" placeholder="Ingrese el nombre del producto">
+    <span th:errors="*{nombre}" style="color: #FF0000"></span> <br>
+    <label>Marca</label><input type="text" th:field="*{marca}" placeholder="Ingrese la marca del producto">
+    <span th:errors="*{marca}" style="color: #FF0000"></span> <br>
+    <label>Descripcion</label><input type="text" th:field="*{descripcion}" placeholder="Ingrese la descripcion del producto">
+    <span th:errors="*{descripcion}" style="color: #FF0000"></span> <br>
+    <label>Existencia</label><input type="text" th:field="*{existencia}" placeholder="Ingrese la existencia del producto">
+    <span th:errors="*{existencia}" style="color: #FF0000"></span> <br>
+    <label>Fecha de Ingreso</label><input type="text" th:field="*{fecha}" placeholder="dd/mm/aaaa">
+    <span th:errors="*{fecha}" style="color: #FF0000"></span> <br>
+    <input type="submit" value="Guardar Producto">
+
+
+</form>
+
+
+</body>
+</html>
